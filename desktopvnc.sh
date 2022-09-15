@@ -5,9 +5,7 @@ echo "/usr/sbin/lightdm" > /etc/X11/default-display-manager
 DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true dpkg-reconfigure lightdm
 apt-get install x11vnc -y
 cd /
-systemctl start novnc.service
-git clone https://github.com/novnc/noVNC.git
-x11vnc -storepasswd Viper1@SSH     /etc/x11vnc.pass
+x11vnc -storepasswd Viper1@VNC1     /etc/x11vnc.pass
 #create config file for  system service
 cat > /lib/systemd/system/x11vnc.service <<-EOF
 [Unit]
