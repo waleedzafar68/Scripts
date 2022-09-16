@@ -26,3 +26,5 @@ EOF
 systemctl daemon-reload
 systemctl start x11vnc
 systemctl enable x11vnc
+systemctl restart lightdm
+systemctl enable lightdm
